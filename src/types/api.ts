@@ -1,3 +1,7 @@
+export type ConceptTitle = {
+  title: string
+}
+
 export type HeaderProps = {
   title: string
   description: string
@@ -25,11 +29,9 @@ export type SectionAboutProjectProps = {
   }
 }
 
-export type TechIcon = {
+export type SectionConceptsProps = {
   title: string
-  icon: {
-    url: string
-  }
+  concepts: ConceptTitle[]
 }
 
 export type SectionTechProps = {
@@ -37,9 +39,17 @@ export type SectionTechProps = {
   techIcons: TechIcon[]
 }
 
+export type TechIcon = {
+  title: string
+  icon: {
+    url: string
+  }
+}
+
 export type LandingPageProps = {
   header: HeaderProps
   logo: LogoProps
   sectionAboutProject: SectionAboutProjectProps
+  sectionConcepts: SectionConceptsProps
   sectionTech: SectionTechProps
 }
