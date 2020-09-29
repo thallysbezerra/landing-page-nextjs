@@ -22,6 +22,7 @@ const Index = ({
   header,
   logo,
   sectionAboutProject,
+  sectionAgenda,
   sectionConcepts,
   sectionModules,
   sectionTech
@@ -32,7 +33,7 @@ const Index = ({
     <SectionTech {...sectionTech} />
     <SectionConcepts {...sectionConcepts} />
     <SectionModules {...sectionModules} />
-    <SectionAgenda />
+    <SectionAgenda {...sectionAgenda} />
     <PricingBox />
     <SectionAboutUs />
     <SectionReviews />
