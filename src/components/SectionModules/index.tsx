@@ -6,7 +6,6 @@ import CardModule from 'components/CardModule'
 
 import { SectionModulesProps } from 'types/api'
 
-import content from './content'
 import * as S from './styles'
 
 const SectionModules = ({ title, modules }: SectionModulesProps) => (
