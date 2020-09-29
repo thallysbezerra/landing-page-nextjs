@@ -26,6 +26,17 @@ export type Modules = {
   description: string
 }
 
+export type PricingBoxProps = {
+  totalPrice: number
+  numberInstallments: number
+  priceInstallment: number
+  benefits: string
+  button: {
+    label: string
+    url: string
+  }
+}
+
 export type SectionAboutProjectProps = {
   title: string
   description: string
@@ -65,6 +76,7 @@ export type TechIcon = {
 export type LandingPageProps = {
   header: HeaderProps
   logo: LogoProps
+  pricingBox: PricingBoxProps
   sectionAboutProject: SectionAboutProjectProps
   sectionAgenda: SectionAgendaProps
   sectionConcepts: SectionConceptsProps
