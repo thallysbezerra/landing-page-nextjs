@@ -41,6 +41,17 @@ const GET_LANDING_PAGE = /* GraphQL */ `
     }
   }
 
+  fragment sectionModules on LandingPage {
+    sectionModules {
+      title
+      modules {
+        title
+        subtitle
+        description
+      }
+    }
+  }
+
   fragment sectionTech on LandingPage {
     sectionTech {
       title
@@ -59,6 +70,7 @@ const GET_LANDING_PAGE = /* GraphQL */ `
       ...logo
       ...sectionAboutProject
       ...sectionConcepts
+      ...sectionModules
       ...sectionTech
     }
   }
