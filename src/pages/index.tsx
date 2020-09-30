@@ -23,6 +23,7 @@ const Index = ({
   logo,
   pricingBox,
   sectionAboutProject,
+  sectionAboutUs,
   sectionAgenda,
   sectionConcepts,
   sectionModules,
@@ -36,7 +37,7 @@ const Index = ({
     <SectionModules {...sectionModules} />
     <SectionAgenda {...sectionAgenda} />
     <PricingBox {...pricingBox} />
-    <SectionAboutUs />
+    <SectionAboutUs {...sectionAboutUs} />
     <SectionReviews />
     <SectionFaq />
     <Footer />

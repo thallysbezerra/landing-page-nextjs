@@ -45,6 +45,25 @@ const GET_LANDING_PAGE = /* GraphQL */ `
     }
   }
 
+  fragment sectionAboutUs on LandingPage {
+    sectionAboutUs {
+      title
+      authors {
+        photo {
+          alternativeText
+          url
+        }
+        name
+        role
+        socialLinks {
+          title
+          url
+        }
+        description
+      }
+    }
+  }
+
   fragment sectionAgenda on LandingPage {
     sectionAgenda {
       title
@@ -90,6 +109,7 @@ const GET_LANDING_PAGE = /* GraphQL */ `
       ...logo
       ...pricingBox
       ...sectionAboutProject
+      ...sectionAboutUs
       ...sectionAgenda
       ...sectionConcepts
       ...sectionModules

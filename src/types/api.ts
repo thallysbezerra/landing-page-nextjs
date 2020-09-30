@@ -1,3 +1,16 @@
+export type Author = {
+  photo: Image
+  name: string
+  role: string
+  socialLinks: SocialLink[]
+  description: string
+}
+
+export type Button = {
+  label: string
+  url: string
+}
+
 export type ConceptTitle = {
   title: string
 }
@@ -5,20 +18,16 @@ export type ConceptTitle = {
 export type HeaderProps = {
   title: string
   description: string
-  button: {
-    label: string
-    url: string
-  }
-  image: {
-    alternativeText: string
-    url: string
-  }
+  button: Button
+  image: Image
 }
 
-export type LogoProps = {
+export type Image = {
   alternativeText: string
   url: string
 }
+
+export type LogoProps = Image
 
 export type Modules = {
   title: string
@@ -31,19 +40,18 @@ export type PricingBoxProps = {
   numberInstallments: number
   priceInstallment: number
   benefits: string
-  button: {
-    label: string
-    url: string
-  }
+  button: Button
 }
 
 export type SectionAboutProjectProps = {
   title: string
   description: string
-  image: {
-    alternativeText: string
-    url: string
-  }
+  image: Image
+}
+
+export type SectionAboutUsProps = {
+  title: string
+  authors: Author[]
 }
 
 export type SectionAgendaProps = {
@@ -66,6 +74,11 @@ export type SectionTechProps = {
   techIcons: TechIcon[]
 }
 
+export type SocialLink = {
+  title: string
+  url: string
+}
+
 export type TechIcon = {
   title: string
   icon: {
@@ -78,6 +91,7 @@ export type LandingPageProps = {
   logo: LogoProps
   pricingBox: PricingBoxProps
   sectionAboutProject: SectionAboutProjectProps
+  sectionAboutUs: SectionAboutProjectProps
   sectionAgenda: SectionAgendaProps
   sectionConcepts: SectionConceptsProps
   sectionModules: SectionModulesProps
