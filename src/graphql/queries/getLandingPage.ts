@@ -1,16 +1,16 @@
 const GET_LANDING_PAGE = /* GraphQL */ `
   fragment header on LandingPage {
     header {
-      title
-      description
       button {
         label
         url
       }
+      description
       image {
         alternativeText
         url
       }
+      title
     }
   }
 
@@ -23,83 +23,96 @@ const GET_LANDING_PAGE = /* GraphQL */ `
 
   fragment pricingBox on LandingPage {
     pricingBox {
-      totalPrice
-      numberInstallments
-      priceInstallment
       benefits
       button {
         label
         url
       }
+      numberInstallments
+      priceInstallment
+      totalPrice
     }
   }
 
   fragment sectionAboutProject on LandingPage {
     sectionAboutProject {
-      title
       description
       image {
         alternativeText
         url
       }
+      title
     }
   }
 
   fragment sectionAboutUs on LandingPage {
     sectionAboutUs {
-      title
       authors {
+        description
+        name
         photo {
           alternativeText
           url
         }
-        name
         role
         socialLinks {
           title
           url
         }
-        description
       }
+      title
     }
   }
 
   fragment sectionAgenda on LandingPage {
     sectionAgenda {
-      title
       description
+      title
     }
   }
 
   fragment sectionConcepts on LandingPage {
     sectionConcepts {
-      title
       concepts {
         title
       }
+      title
     }
   }
 
   fragment sectionModules on LandingPage {
     sectionModules {
-      title
       modules {
-        title
-        subtitle
         description
+        subtitle
+        title
       }
+      title
+    }
+  }
+
+  fragment sectionReviews on LandingPage {
+    sectionReviews {
+      reviews {
+        name
+        photo {
+          url
+        }
+        text
+      }
+      title
     }
   }
 
   fragment sectionTech on LandingPage {
     sectionTech {
-      title
       techIcons {
-        title
         icon {
           url
         }
+        title
       }
+      title
     }
   }
 
@@ -113,6 +126,7 @@ const GET_LANDING_PAGE = /* GraphQL */ `
       ...sectionAgenda
       ...sectionConcepts
       ...sectionModules
+      ...sectionReviews
       ...sectionTech
     }
   }

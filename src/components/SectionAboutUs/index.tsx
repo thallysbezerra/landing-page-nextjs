@@ -6,7 +6,6 @@ import ProfileCard from 'components/ProfileCard'
 
 import { SectionAboutUsProps } from 'types/api'
 
-import content from './content'
 import * as S from './styles'
 
 const SectionAboutUs = ({ authors, title }: SectionAboutUsProps) => (
