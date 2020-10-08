@@ -80,6 +80,16 @@ const GET_LANDING_PAGE = /* GraphQL */ `
     }
   }
 
+  fragment sectionFaq on LandingPage {
+    sectionFaq {
+      questions {
+        answer
+        question
+      }
+      title
+    }
+  }
+
   fragment sectionModules on LandingPage {
     sectionModules {
       modules {
@@ -125,6 +135,7 @@ const GET_LANDING_PAGE = /* GraphQL */ `
       ...sectionAboutUs
       ...sectionAgenda
       ...sectionConcepts
+      ...sectionFaq
       ...sectionModules
       ...sectionReviews
       ...sectionTech

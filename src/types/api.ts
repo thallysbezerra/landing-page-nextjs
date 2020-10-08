@@ -43,6 +43,11 @@ export type PricingBoxProps = {
   totalPrice: number
 }
 
+export type Question = {
+  answer: string
+  question: string
+}
+
 export type Review = {
   name: string
   photo: {
@@ -69,6 +74,11 @@ export type SectionAgendaProps = {
 
 export type SectionConceptsProps = {
   concepts: ConceptTitle[]
+  title: string
+}
+
+export type SectionFaqProps = {
+  questions: Question[]
   title: string
 }
 
@@ -107,6 +117,7 @@ export type LandingPageProps = {
   sectionAboutUs: SectionAboutUsProps
   sectionAgenda: SectionAgendaProps
   sectionConcepts: SectionConceptsProps
+  sectionFaq: SectionFaqProps
   sectionModules: SectionModulesProps
   sectionReviews: SectionReviewsProps
   sectionTech: SectionTechProps
