@@ -25,3 +25,5 @@ export const Wrapper = styled.footer`
     }
   `}
 `
+
+export const Content = styled.div``

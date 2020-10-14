@@ -15,6 +15,10 @@ export type ConceptTitle = {
   title: string
 }
 
+export type FooterProps = {
+  text: string
+}
+
 export type HeaderProps = {
   button: Button
   description: string
@@ -110,6 +114,7 @@ export type TechIcon = {
 }
 
 export type LandingPageProps = {
+  footer: FooterProps
   header: HeaderProps
   logo: LogoProps
   pricingBox: PricingBoxProps

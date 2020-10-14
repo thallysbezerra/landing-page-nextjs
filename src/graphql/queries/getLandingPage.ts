@@ -1,4 +1,10 @@
 const GET_LANDING_PAGE = /* GraphQL */ `
+  fragment footer on LandingPage {
+    footer {
+      text
+    }
+  }
+
   fragment header on LandingPage {
     header {
       button {
@@ -128,6 +134,7 @@ const GET_LANDING_PAGE = /* GraphQL */ `
 
   query GET_LANDING_PAGE {
     landingPage {
+      ...footer
       ...header
       ...logo
       ...pricingBox

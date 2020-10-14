@@ -19,6 +19,7 @@ import GET_LANDING_PAGE from 'graphql/queries/getLandingPage'
 import { LandingPageProps } from 'types/api'
 
 const Index = ({
+  footer,
   header,
   logo,
   pricingBox,
@@ -42,7 +43,7 @@ const Index = ({
     <SectionAboutUs {...sectionAboutUs} />
     <SectionReviews {...sectionReviews} />
     <SectionFaq {...sectionFaq} />
-    <Footer />
+    <Footer {...footer} />
     <JsonSchema />
   </>
 )
